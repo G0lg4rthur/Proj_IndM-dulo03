@@ -7,59 +7,59 @@ Empresa, Tecnologia, Utilização de Tecnologia, Colaborador
 
 2. Principais campos e tipos:
 - Empresa:
-  - company_id: int
+  - empresa_id: int
   - nome: varchar(100)
   - endereço: varchar(200)
   - contato: varchar(100)
-  - other_details: varchar(255)
+  - outros_detalhes: varchar(255)
 
 - Tecnologia:
   - tecnologia_id: int
   - nome: varchar(100)
   - área: varchar(100)
-  - other_details: varchar(255)
+  - outros_detalhes: varchar(255)
 
 - Utilização de Tecnologia:
-  - company_id: int (chave estrangeira referenciando company_id da tabela Empresa)
-  - technology_id: int (chave estrangeira referenciando technology_id da tabela Tecnologia)
-  - start_date: data
-  - date_term: data
-  - other_details: varchar(255)
+  - empresa_id: int (chave estrangeira referenciando company_id da tabela Empresa)
+  - tecnologia_id: int (chave estrangeira referenciando technology_id da tabela Tecnologia)
+  - data_inicio: data
+  - data_termino: data
+  - outros_detalhes: varchar(255)
 
 - Colaborador:
   - colaborador_id: int
   - nome: varchar(100)
   - cargo: varchar(100)
-  - company_id: int (chave estrangeira referenciando company_id da tabela Empresa)
-  - other_details: varchar(255)
+  - empresa_id: int (chave estrangeira referenciando empresa_id da tabela Empresa)
+  - outros_detalhes: varchar(255)
 
 3. Relacionamentos:
-A tabela Utilização de Tecnologia possui chaves estrangeiras (company_id e technology_id) referenciando as chaves primárias das tabelas Empresa e Tecnologia, respectivamente. A tabela Colaborador possui uma chave estrangeira (company_id) referenciando a chave primária da tabela Empresa.
+A tabela Utilização de Tecnologia possui chaves estrangeiras (empresa_id e tecnologia_id) referenciando as chaves primárias das tabelas Empresa e Tecnologia, respectivamente. A tabela Colaborador possui uma chave estrangeira (empresa_id) referenciando a chave primária da tabela Empresa.
 
 4. Exemplos de registros:
 - Empresa:
-  - company_id: 1
+  - empresa_id: 1
   - nome: "Empresa A"
   - endereço: "Rua X, 123"
   - contato: "empresa_a@example.com"
-  - other_details: "Detalhes sobre a Empresa A"
+  - outros_detalhes: "Detalhes sobre a Empresa A"
 
 - Tecnologia:
   - tecnologia_id: 1
   - nome: "Tecnologia A"
   - área: "Webdev"
-  - other_details: "Detalhes sobre a Tecnologia A"
+  - outros_detalhes: "Detalhes sobre a Tecnologia A"
 
 - Utilização de Tecnologia:
-  - company_id: 1
-  - technology_id: 1
-  - start_date: "2023-01-01"
-  - date_term: "2023-06-30"
-  - other_details: "Detalhes sobre o uso da Tecnologia A pela Empresa A"
+  - empresa_id: 1
+  - tecnologia_id: 1
+  - data_inicio: "2023-01-01"
+  - data_termino "2023-06-30"
+  - outros_detalhes: "Detalhes sobre o uso da Tecnologia A pela Empresa A"
 
 - Colaborador:
   - colaborador_id: 1
   - nome: "João Silva"
   - cargo: "Desenvolvedor"
-  - company_id: 1
-  - other_details: "Detalhes sobre o colaborador João Silva na Empresa A"
+  - empresa_id: 1
+  - outros_detalhes: "Detalhes sobre o colaborador João Silva na Empresa A"
