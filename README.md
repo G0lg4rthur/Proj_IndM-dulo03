@@ -1,5 +1,6 @@
 # Proj_IndM-dulo03
-![image](https://github.com/G0lg4rthur/Proj_IndM-dulo03/assets/101434220/0e847d81-8fd9-454a-9c31-d63f88daf35b)
+![image](https://github.com/G0lg4rthur/Proj_IndM-dulo03/assets/101434220/e425d276-ab38-4499-ad8e-c205d143ee66)
+
 
 1. Entidades:
 Empresa, Tecnologia, Utilização de Tecnologia, Colaborador
